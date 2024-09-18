@@ -1,3 +1,11 @@
+# Problem Explanation:
+# Given a number, you need to continuously sum its digits until the result is a single digit.
+
+# Example 1:
+# Input: num = 38
+# Process: 3 + 8 = 11, 1 + 1 = 2
+# Output: 2
+
 class Sum:
     def addDigite(self, num) -> int:
         sum = 0
