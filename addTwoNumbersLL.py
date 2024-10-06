@@ -4,16 +4,11 @@ class Node:
         self.next = None
 
 
-class Node2:
-    def __init__(self, data):
-        self.data = data
-        self.next = None
-
-
 class LinkedList:
     def __init__(self):
         self.head = None
         self.head2 = None
+        self.finalListHead = None
 
     def add1(self, data):
         if self.head is None:
@@ -27,13 +22,13 @@ class LinkedList:
 
     def add2(self, data):
         if self.head2 is None:
-            self.head2 = Node2(data)
+            self.head2 = Node(data)
             return
 
         temp = self.head2
         while temp.next:
             temp = temp.next
-        temp.next = Node2(data)
+        temp.next = Node(data)
 
     def sum(self):
         stack1 = []
@@ -65,14 +60,21 @@ class LinkedList:
             while stack2:
                 sum2 *= 10
                 sum2 += stack2.pop()
+            print('sum1', sum1, 'sum2', sum2)
 
             finalSum = sum1+sum2
             list = []
             while finalSum:
                 list.append(finalSum % 10)
                 finalSum //= 10
-
-            return list
+            while list:
+                if self.finalListHead is None:
+                    self.finalListHead = Node(list.pop(0))
+                else:
+                    temp = self.finalListHead
+                    while temp.next:
+                        temp = temp.next
+                    temp.next = Node(list.pop(0))
 
     def printLL1(self):
         if self.head is None:
@@ -94,6 +96,16 @@ class LinkedList:
             print(current.data, end='->' if current.next else '\n')
             current = current.next
 
+    def printFinalLL(self):
+        if self.finalListHead is None:
+            print("Linked List is empty")
+            return
+
+        current = self.finalListHead
+        while current:
+            print(current.data, end='->' if current.next else '\n')
+            current = current.next
+
 
 ll = LinkedList()
 ll.add1(2)
@@ -108,3 +120,4 @@ ll.printLL1()
 
 res = ll.sum()
 print(res)
+ll.printFinalLL()
