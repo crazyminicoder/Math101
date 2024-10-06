@@ -48,7 +48,6 @@ class LinkedList:
             while temp:
                 stack2.append(temp.data)
                 temp = temp.next
-        print(stack1, " ", stack2)
         if stack1 and stack2:
             sum1 = 0
             sum2 = 0
@@ -60,7 +59,6 @@ class LinkedList:
             while stack2:
                 sum2 *= 10
                 sum2 += stack2.pop()
-            print('sum1', sum1, 'sum2', sum2)
 
             finalSum = sum1+sum2
             list = []
@@ -108,16 +106,11 @@ class LinkedList:
 
 
 ll = LinkedList()
-ll.add1(2)
-ll.add1(4)
-ll.add1(3)
-ll.add2(5)
-ll.add2(6)
-ll.add2(4)
+ll.add1(0)
+ll.add2(0)
 
 ll.printLL()
 ll.printLL1()
 
-res = ll.sum()
-print(res)
+ll.sum()
 ll.printFinalLL()
