@@ -1,21 +1,11 @@
 class Solution:
-    def lcp(self, str):
-        s = ''
-        for i in str:
-            count = 0
-            currentStr = ""
-            for j in range(len(str)-1):
-                temp = str[j]
-                print('temp ', temp)
-                currentStr += temp[j]
-                print('currentStr ', currentStr)
-                if temp[j] == temp[j+1]:
-                    count += 1
-            if count == len(str):
-                s += currentstr
-                print('s', s)
-            else:
-                return s
+    def lcp(self, strs):
+        for i in range(len(strs[0])):
+            char = strs[0][i]
+            for string in strs[1:]:
+                if i >= len(string) or string[i] != char:
+                    return strs[0][:i]
+        return strs[0]
 
 
 res = Solution()
