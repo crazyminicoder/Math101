@@ -7,6 +7,7 @@ class Solution:
                     return strs[0][:i]
         return strs[0]
 
+ 
 
 res = Solution()
 ans = res.lcp(["flower", "flow", "flight"])
