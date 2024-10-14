@@ -40,9 +40,19 @@ class Solution:
 
         return True
 
+    def findHappyNo(self, n):
+        happyNumbers = []
+        for i in range(1, n):
+            temp = self.isHappy(i)
+            if temp:
+                happyNumbers.append(i)
+
+        return happyNumbers
+
 
 res = Solution()
 ans = res.isHappy(19)
 print(ans)
 
+print(res.findHappyNo(100))
 # Date: 14th October 2024
