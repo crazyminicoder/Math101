@@ -1,3 +1,6 @@
+from collections import Counter
+
+
 class Solution:
     def anagram(self, s, t):
         s1 = list(s)
@@ -30,7 +33,16 @@ class Solution:
         # if i not in s1:
         # return False
 
+    def anagram2(self, s, t):
+        if len(s) != len(t):
+            return False
+        if Counter(s) != Counter(t):
+            return False
+        return True
+
 
 s = Solution()
 res = s.anagram('rat', 'car')
+res1 = s.anagram2('rat', 'car')
 print(res)
+print(res1)
