@@ -26,5 +26,5 @@ class Solution:
 
 
 s = Solution()
-a = s.canConstruct('ba', 'abb')
+a = s.canConstruct('a', 'abb')
 print(a)
