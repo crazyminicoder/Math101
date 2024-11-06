@@ -31,4 +31,5 @@ class Solution:
 a = Solution()
 sentence = "I speak Goat Latin"
 res = a.toGoatLatin(sentence)
+
 print(res)
