@@ -11,4 +11,5 @@ class Solution:
 
 s = Solution()
 resu = s.base7(100)
+
 print(resu)
