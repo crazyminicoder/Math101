@@ -5,6 +5,7 @@ class Solution:
         rdSet = set()
         mdSet = set()
         for i in ransomNote:
+
             rdSet.add(i)
             if i in ransomDict:
                 ransomDict[i] += 1
