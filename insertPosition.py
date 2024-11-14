@@ -10,4 +10,5 @@ class Solution:
 s = Solution()
 
 res = s.searchIndex([-1, 3, 5, 6], -2)
+
 print(res)
