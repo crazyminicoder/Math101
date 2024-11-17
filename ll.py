@@ -47,6 +47,17 @@ class LinkedList:
 
             print('key not found')
 
+    def reverse(self):
+        prev = None
+        temp = self.head
+        while temp.next:
+            next = temp.next
+            temp.next = prev
+            prev = temp
+            temp = next
+
+        self.head = prev
+
 
 ll = LinkedList()
 ll.add(5)
@@ -62,4 +73,9 @@ ll.printLL()
 ll.remove(15)
 print()
 
+ll.printLL()
+
+print()
+
+ll.reverse()
 ll.printLL()
