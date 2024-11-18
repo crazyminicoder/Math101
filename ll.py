@@ -50,13 +50,31 @@ class LinkedList:
     def reverse(self):
         prev = None
         temp = self.head
-        while temp.next:
+        while temp:
             next = temp.next
             temp.next = prev
             prev = temp
             temp = next
 
         self.head = prev
+
+    def addInPlace(self, data, pos):
+        if pos == 0:
+            newNode = Node(data)
+            newNode.next = self.head
+            self.head = newNode
+            return
+        temp = self.head
+        count = 0
+        while count < pos-1:
+            if temp is None:
+                raise IndexError('Position out of bounds')
+            temp = temp.next
+            count += 1
+
+        newNode = Node(data)
+        newNode.next = temp.next
+        temp.next = newNode
 
 
 ll = LinkedList()
@@ -78,4 +96,9 @@ ll.printLL()
 print()
 
 ll.reverse()
+ll.printLL()
+print()
+
+ll.addInPlace(44, 3)
+
 ll.printLL()
