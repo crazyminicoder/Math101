@@ -69,6 +69,7 @@ class LinkedList:
         count = 0
         while count < pos-1:
             if temp is None:
+
                 raise IndexError('Position out of bounds')
             temp = temp.next
             count += 1
