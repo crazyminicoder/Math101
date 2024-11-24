@@ -20,5 +20,6 @@ class Solution:
 sol = Solution()
 s = 'leetcode'
 wordDict = ['leet', 'code']
+
 res = sol.wordBreak(s, wordDict)
 print(res)
