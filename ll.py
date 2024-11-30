@@ -23,6 +23,7 @@ class LinkedList:
 
     def printLL(self):
         if self.head is None:
+            
             print('LinkedList is empty')
             return
         temp = self.head
