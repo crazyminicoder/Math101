@@ -16,15 +16,16 @@ class LinkedList:
             return
         temp = self.head
         while temp.next:
-            
+
             temp = temp.next
 
         temp.next = newNode
 
     def printLL(self):
         if self.head is None:
-            
+
             print('LinkedList is empty')
+
             return
         temp = self.head
         while temp:
