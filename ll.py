@@ -29,6 +29,7 @@ class LinkedList:
             return
         temp = self.head
         while temp:
+            
             print(temp.data, end='->' if temp.next else '')
 
             temp = temp.next
