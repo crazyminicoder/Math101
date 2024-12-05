@@ -36,6 +36,7 @@ class LinkedList:
 
     def remove(self, key):
         if self.head is None:
+            
             print('LinkedList is empty')
             return
         if self.head.data == key:
