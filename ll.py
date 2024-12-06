@@ -29,14 +29,14 @@ class LinkedList:
             return
         temp = self.head
         while temp:
-            
+
             print(temp.data, end='->' if temp.next else '')
 
             temp = temp.next
 
     def remove(self, key):
         if self.head is None:
-            
+
             print('LinkedList is empty')
             return
         if self.head.data == key:
@@ -56,6 +56,7 @@ class LinkedList:
 
     def reverse(self):
         prev = None
+
         temp = self.head
         while temp:
             next = temp.next
