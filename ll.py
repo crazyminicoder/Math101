@@ -46,6 +46,7 @@ class LinkedList:
             prev = None
             while temp:
                 if temp.data == key:
+
                     if prev:
                         prev.next = temp.next
                     return
