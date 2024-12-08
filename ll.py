@@ -60,6 +60,7 @@ class LinkedList:
 
         temp = self.head
         while temp:
+
             next = temp.next
             temp.next = prev
             prev = temp
