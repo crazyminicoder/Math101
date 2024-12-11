@@ -64,6 +64,7 @@ class LinkedList:
             next = temp.next
 
             temp.next = prev
+            
             prev = temp
             temp = next
 
