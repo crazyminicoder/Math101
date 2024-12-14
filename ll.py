@@ -72,6 +72,7 @@ class LinkedList:
         self.head = prev
 
     def addInPlace(self, data, pos):
+
         if pos == 0:
             newNode = Node(data)
             newNode.next = self.head
