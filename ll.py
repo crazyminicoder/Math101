@@ -88,6 +88,7 @@ class LinkedList:
             count += 1
 
         newNode = Node(data)
+
         newNode.next = temp.next
         temp.next = newNode
 
