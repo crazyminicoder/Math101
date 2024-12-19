@@ -84,6 +84,7 @@ class LinkedList:
             if temp is None:
 
                 raise IndexError('Position out of bounds')
+
             temp = temp.next
             count += 1
 
