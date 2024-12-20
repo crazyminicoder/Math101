@@ -96,6 +96,7 @@ class LinkedList:
 
 
 ll = LinkedList()
+
 ll.add(5)
 ll.add(10)
 ll.add(15)
