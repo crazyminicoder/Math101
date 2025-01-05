@@ -121,6 +121,7 @@ ll.printLL()
 print()
 
 ll.reverse()
+
 ll.printLL()
 print()
 
