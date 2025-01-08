@@ -86,6 +86,7 @@ class LinkedList:
                 raise IndexError('Position out of bounds')
 
             temp = temp.next
+
             count += 1
 
         newNode = Node(data)
