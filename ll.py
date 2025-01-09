@@ -80,7 +80,9 @@ class LinkedList:
             return
         temp = self.head
         count = 0
+        
         while count < pos-1:
+
             if temp is None:
 
                 raise IndexError('Position out of bounds')
