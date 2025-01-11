@@ -79,6 +79,7 @@ class LinkedList:
             self.head = newNode
             return
         temp = self.head
+        
         count = 0
         
         while count < pos-1:
