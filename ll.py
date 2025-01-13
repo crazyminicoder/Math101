@@ -76,12 +76,13 @@ class LinkedList:
         if pos == 0:
             newNode = Node(data)
             newNode.next = self.head
+
             self.head = newNode
             return
         temp = self.head
-        
+
         count = 0
-        
+
         while count < pos-1:
 
             if temp is None:
