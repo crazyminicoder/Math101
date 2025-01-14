@@ -75,6 +75,7 @@ class LinkedList:
 
         if pos == 0:
             newNode = Node(data)
+
             newNode.next = self.head
 
             self.head = newNode
