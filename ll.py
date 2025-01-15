@@ -56,6 +56,7 @@ class LinkedList:
             print('key not found')
 
     def reverse(self):
+
         prev = None
 
         temp = self.head
@@ -74,6 +75,7 @@ class LinkedList:
     def addInPlace(self, data, pos):
 
         if pos == 0:
+
             newNode = Node(data)
 
             newNode.next = self.head
